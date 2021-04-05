@@ -1,5 +1,8 @@
 # COMP-4800-FinalProject-Chatroom
-A simple chatroom using Django (which implements distributed systems) and WebSocket as well as other tools. 
+A simple chatroom using the Socket module found in Python that creates an easy to use P2P (peer-to-peer) chat room located in the terminal window.
 
-Run the webserver from the same directory level that contains the manage.py (essentially the root directory of the project/app, named chatapp in this case).
-`python3 manage.py runserver` 
+To run this chat program, first have a separate terminal/console window and run `python server.py` .
+Choose a port number for your server host.
+Create a new window and run `python client.py` .
+Enter the host's ip and port number, then enter your username for the session.
+On the empty new-line, start typing and you should see these messages appear in both the sever and client windows.
