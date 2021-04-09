@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <div class="shadow p-5 mb-4 bg-white">
+    <div class="text-center my-5">
+        <img src="{% static 'pics/crest.png' %}" width='150'>
+        <h3>Django Chat Rooms COMP-4800</h3>
+    </div>
+    <form method="POST" action="/">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="roomname">Enter Room Name:</label>
+          <input type="text" class="form-control" id="roomname" name='roomname' placeholder="Room Name">
+        </div>
+        <div class="form-group">
+            <label for="username">Enter Your Username:</label>
+            <input type="text" class="form-control" id="username" name='username' placeholder="Username">
+        </div>
+        <div class="text-center py-2">
+            <button type="submit" class="btn btn-primary">Lets Go!</button>
+        </div>
+        <div class="text-center pt-4">
+            Karam Chaban | Tony Alas | Mitchell Sturba
+        </div>
+    </form>
+</div>
+{% endblock %}
