@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
+<!-- Load static for images and content -->
 {% load static %}
 {% block content %}
 
   <div class="shadow p-5 mb-4 bg-white">
     <div class="text-center my-5">
         <img src="{% static 'pics/crest.png' %}" width='150'>
+        <!-- Title of our application -->
         <h3>Django Chat Rooms COMP-4800</h3>
     </div>
     <form method="POST" action="/">
@@ -21,6 +23,7 @@
             <button type="submit" class="btn btn-primary">Lets Go!</button>
         </div>
         <div class="text-center pt-4">
+            <!-- Our names -->
             Karam Chaban | Tony Alas | Mitchell Sturba
         </div>
     </form>
