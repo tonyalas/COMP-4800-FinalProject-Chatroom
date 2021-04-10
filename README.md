@@ -17,4 +17,4 @@ On the empty new-line, start typing and you should see these messages appear in 
 
 [Tony Alas](https://github.com/tonyalas)
 
-Karam Chaban
+[Karam Chaban](https://github.com/chaban94)
