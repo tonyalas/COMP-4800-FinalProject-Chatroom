@@ -138,14 +138,13 @@ STATICFILES_DIRS = [
 
 ASGI_APPLICATION = 'django_chatroom.routing.application'
 
-if ENV == 'DEVELOPMENT':
-  CHANNEL_LAYERS = {
-      'default': {
-          'BACKEND': 'channels_redis.core.RedisChannelLayer',
-          'CONFIG': {
-              "hosts": [('127.0.0.1', 6379)],
-          },
+CHANNEL_LAYERS = {
+    'default': {
+      'BACKEND': 'channels_redis.core.RedisChannelLayer',
+      'CONFIG': {
+          "hosts": [os.environ.get('REDIS_URL', 'redis://localhost:6379')],
       },
-  }
+    },
+}
 
 # export DJANGO_SETTINGS_MODULE=django_chatroom.settings
