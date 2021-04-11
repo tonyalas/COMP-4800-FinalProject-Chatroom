@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
 <input type="hidden" id="current_user" value="{{user}}">
@@ -8,6 +8,10 @@
 
 <div class="shadow p-4 mb-4 bg-white">
   <div>
+    <div class="text-center py-2 pb-3">
+      <h5><img src="{% static 'pics/crest.png' %}" width='50'> Django Chat Rooms COMP-4800 <img src="{% static 'pics/crest.png' %}" width='50'></h5>
+    </div>
+  
     <a href="/" class="btn btn-dark btn-sm" role="button" id="logout">Logout</a>
     <a href="/{{roomname}}/{{user}}/{{user_id}}" class="btn btn-dark btn-sm" role="button">Refresh</a>
     <button class="btn btn-dark btn-sm float-right" data-toggle="modal" data-target="#room_details">Room Details</button>
